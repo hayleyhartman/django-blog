@@ -13,8 +13,16 @@
 </head>
 
 <body class="container">
-    <h1 class="py-3 my-3 text-center title">my new blog</h1>
-            {% block content %}
-            {% endblock %}
+    <div class="py-3 my-3 text-center post-block">
+        <h1>my new blog</h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">create a new post</span></a>
+        {% endif %}
+    </div>
+
+
+    {% block content %}
+    {% endblock %}
 </body>
+
 </html>
