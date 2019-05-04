@@ -1,19 +1,29 @@
+{% load static %}
+
 <html>
 
 <head>
     <title>Abba</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body>
-    <h1>my new blog</h1>
-    {% for post in posts %}
-    <div>
-        <h3>{{ post.title }}</h3>
-        <p>Published: {{ post.published_date }}</p>
-        <p>Author: {{ post.author }}</p>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-    {% endfor %}
-</body>
+<body class="container">
+    <h1 class="py-3 my-3 text-center title">my new blog</h1>
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-3">
+            <div class="post-block py-5 px-1">
 
+                <h3>{{ post.title }}</h3>
+                <p>Published: {{ post.published_date }}</p>
+                <p>Author: {{ post.author }}</p>
+                <p>{{ post.text|linebreaksbr }}</p>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
 </html>
