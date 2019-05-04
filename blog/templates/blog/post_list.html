@@ -1,9 +1,19 @@
 <html>
-    <head>
-        <title>Abba</title>
-    </head>
-    <body>
-        <h1>hello</h1>
-        <p>does it worrrrkkkkkk??</p>
-    </body>
+
+<head>
+    <title>Abba</title>
+</head>
+
+<body>
+    <h1>my new blog</h1>
+    {% for post in posts %}
+    <div>
+        <h3>{{ post.title }}</h3>
+        <p>Published: {{ post.published_date }}</p>
+        <p>Author: {{ post.author }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+</body>
+
 </html>
