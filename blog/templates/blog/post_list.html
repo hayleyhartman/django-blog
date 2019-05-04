@@ -3,16 +3,25 @@
 {% block content %}
 <div class="row">
     {% for post in posts %}
-    <div class="col-md-3">
-        <div class="post-block py-5 px-1">
-
+    {% if post.color %}
+    <div class="col-md-3 mb-3">
+        <div class="post-block py-3 px-1 {{ post.color }}">
             <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
             <p>Published: {{ post.published_date }}</p>
             <p>Author: {{ post.author }}</p>
             <p>{{ post.text|linebreaksbr }}</p>
-
         </div>
     </div>
+    {% else %}
+    <div class="col-md-3 mb-3">
+        <div class="post-block py-3 px-1">
+            <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+            <p>Published: {{ post.published_date }}</p>
+            <p>Author: {{ post.author }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    </div>
+    {% endif %}
     {% endfor %}
 </div>
 

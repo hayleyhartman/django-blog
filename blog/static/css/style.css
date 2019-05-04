@@ -1,9 +1,44 @@
-
-
-
 .post-block,
 .title {
-    background: #FFC9B5 !important;
-    border: 2px solid #CC3F0C;
+    background: #FFC9B5;
+    border: 2px solid #000;
 }
 
+* {
+    color: #fff;
+}
+
+.blue {
+    background: #6C809A;
+    color: #fff;
+}
+
+a {
+    color: #fff !important;
+    text-decoration: underline;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+a:hover {
+    color: #dddddd !important;
+    text-decoration: underline;
+}
+
+
+.gray {
+    background: #9A6D38;
+}
+
+.pink {
+    background: #4B543B;
+}
+
+.orange {
+    background: #CC3F0C;
+}
+
+.post-block {
+    min-height: 15rem;
+    max-height: 15rem;
+}
