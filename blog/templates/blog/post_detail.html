@@ -5,8 +5,7 @@
 <h5 class="post-block">{{ post.author }}</h5>
 <p class="post-block">{{ post.text }}</p>
 {% if user.is_authenticated %}
-    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil">spans aren't
-        working</span></a>
+    <a class="btn btn-default text-dark" href="{% url 'post_edit' pk=post.pk %}">edit this post</a>
 {% endif %}
 
 {% endblock %}

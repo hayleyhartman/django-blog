@@ -1,0 +1,42 @@
+@import "vars";
+
+.post-block,
+.title {
+    background: #FFC9B5;
+}
+
+
+.blue {
+    background: rgba(0, 0, 255, 1);
+    color: #fff;
+}
+
+a {
+    color: #fff !important;
+    text-decoration: underline;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+a:hover {
+    color: #dddddd !important;
+    text-decoration: underline;
+}
+
+
+.gray {
+    background: $red;
+}
+
+.pink {
+    background: $red;
+}
+
+.orange {
+    background: $black;
+}
+
+.post-block {
+    min-height: 15rem;
+    max-height: 15rem;
+}

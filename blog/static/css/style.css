@@ -1,44 +1,38 @@
 .post-block,
 .title {
-    background: #FFC9B5;
-    border: 2px solid #000;
-}
-
-* {
-    color: #fff;
+  background: #FFC9B5;
 }
 
 .blue {
-    background: #6C809A;
-    color: #fff;
+  background: blue;
+  color: #fff;
 }
 
 a {
-    color: #fff !important;
-    text-decoration: underline;
-    transition-property: all;
-    transition-duration: 300ms;
+  color: #fff !important;
+  text-decoration: underline;
+  transition-property: all;
+  transition-duration: 300ms;
 }
 
 a:hover {
-    color: #dddddd !important;
-    text-decoration: underline;
+  color: #dddddd !important;
+  text-decoration: underline;
 }
 
-
 .gray {
-    background: #9A6D38;
+  background: red;
 }
 
 .pink {
-    background: #4B543B;
+  background: red;
 }
 
 .orange {
-    background: #CC3F0C;
+  background: #000000;
 }
 
 .post-block {
-    min-height: 15rem;
-    max-height: 15rem;
+  min-height: 15rem;
+  max-height: 15rem;
 }
